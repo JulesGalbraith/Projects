@@ -45,12 +45,14 @@ function draw() {
 // }
 
 function placeThought() {
-  thoughtDist = (thoughtX, thoughtY, width / 2, height / 2)
-  thoughtDist = constrain(thoughtDist, 0, ellipseRad);
+
 
   thoughtX = random(width / 2 - ellipseRad, width / 2 + ellipseRad);
   thoughtY = random(height / 2 - ellipseRad, height / 2 + ellipseRad);
 
+  thoughtDist = dist(thoughtX, thoughtY, width/2, height/2)
+  thoughtDist = constrain(thoughtDist, 0, ellipseRad);
+  return true
 
 }
 
