@@ -18,6 +18,7 @@ function setup() {
   background(0);
   //ellipseTemp();
 
+noCursor();
   for (i = 0; i < thoughtsLength; i++) {
     placeThought();
     thoughts.push(new Thought(thoughtX, thoughtY, 10));
