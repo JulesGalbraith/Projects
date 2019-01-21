@@ -31,21 +31,13 @@ function setup() {
 
 function draw() {
   for (i = 0; i < thoughtsLength; i++) {
-    if (releaseThought()) {
+  //  if (releaseThought()) {
       thoughts[i].update();
-    }
+  //  }
     thoughts[i].display();
   }
 }
 
-// function ellipseTemp() {
-//   ellipseMode(CENTER);
-//   push();
-//   stroke(255);
-//   fill(0);
-//   ellipse(width/2,height/2,ellipseSize);
-//   pop();
-// }
 
 function placeThought() {
 
@@ -68,9 +60,4 @@ function mouseDragged() {
 }
 
 
-function releaseThought() {
-  mouseToBall = dist(mouseX, mouseY, thoughtX, thoughtY);
-  if (mouseToBall < thoughts[i].size / 2) {
-    return true;
-  }
-}
+//

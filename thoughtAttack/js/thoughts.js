@@ -18,6 +18,18 @@ display() {
 }
 
 update() {
+
+
+  if (! this.releaseThought) {
+    this.vx = 0;
+    this.vy = 0;
+  }
+
+  else {
+
+  this.setVelocity();
+}
+
   this.x += this.vx;
   this.y += this.vy;
 
@@ -36,9 +48,17 @@ update() {
 
 }
 
+
 setVelocity() {
   this.vx = random(-this.speed,this.speed);
   this.vy = random(-this.speed,this.speed);
+}
+
+releaseThought() {
+  mouseToBall = dist(mouseX, mouseY, thoughtX, thoughtY);
+  if (mouseToBall < thoughts[i].size / 2) {
+    return true;
+  }
 }
 
 }
