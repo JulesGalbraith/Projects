@@ -5,11 +5,14 @@ var ellipseRad = ellipseSize / 2;
 
 
 var thoughts = [];
-var thoughtsLength = 1000;
+var thoughtsLength = 100;
 var thoughtX;
 var thoughtY;
 var thoughtDist;
 var i;
+
+var r;
+var theta;
 
 var mouseToBall;
 
@@ -47,13 +50,11 @@ function draw() {
 
 function placeThought() {
 
+ r = random(0,ellipseRad);
+ theta = random(0,2*PI);
 
-  thoughtX = random(width / 2 - ellipseRad, width / 2 + ellipseRad);
-  thoughtY = random(height / 2 - ellipseRad, height / 2 + ellipseRad);
-
-  thoughtDist = dist(thoughtX, thoughtY, width/2, height/2)
-  thoughtDist = constrain(thoughtDist, 0, ellipseRad);
-  return true
+ thoughtX = width/2 + r*cos(theta)
+ thoughtY = height/2 + r*sin(theta)
 
 }
 
