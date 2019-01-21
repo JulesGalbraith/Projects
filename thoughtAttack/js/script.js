@@ -5,7 +5,7 @@ var ellipseRad = ellipseSize / 2;
 
 
 var thoughts = [];
-var thoughtsLength = 100;
+var thoughtsLength = 1000;
 var thoughtX;
 var thoughtY;
 var thoughtDist;
@@ -19,12 +19,11 @@ var mouseToBall;
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(0);
-  //ellipseTemp();
 
-noCursor();
+ //noCursor();
   for (i = 0; i < thoughtsLength; i++) {
     placeThought();
-    thoughts.push(new Thought(thoughtX, thoughtY, 10));
+    thoughts.push(new Thought(thoughtX, thoughtY,random(0,30)));
     thoughts[i].setVelocity();
   }
 
