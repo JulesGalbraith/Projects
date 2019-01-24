@@ -49,7 +49,7 @@ function placeThought() {
 
 }
 
-function mouseDragged() {
+function mouseClicked() {
 
   for (i = 0; i < thoughtsLength; i++) {
 

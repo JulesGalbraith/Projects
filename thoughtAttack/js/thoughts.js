@@ -5,16 +5,23 @@ class Thought {
     this.size = size;
     this.vx = 0;
     this.vy = 0;
-    this.speed = 3;
+    this.speed = 5
+    this.colour = 0;
+    this.t = 0.1;
   }
 
 
 display() {
+
+  this.colour = (noise(this.t)*255)*1.5;
   push();
   noStroke();
-  fill(random(255));
+  fill(this.colour);
   ellipse(this.x,this.y,this.size);
   pop();
+
+  this.t += 0.1;
+
 }
 
 update() {
@@ -26,7 +33,6 @@ update() {
   }
 
   else {
-
   this.setVelocity();
 }
 
