@@ -1,6 +1,6 @@
 "use strict"
 
-var ellipseSize = 200;
+var ellipseSize = 100;
 var ellipseRad = ellipseSize / 2;
 
 
